@@ -7,7 +7,7 @@ requires = open('requirements.txt').read().splitlines()
 
 setup(
     name="dynamodb_stream_dispatcher",
-    version='0.1.4',
+    version='0.2.0',
     description=description,
     long_description=description,
     author="SAWANOBORI Yukihiko",
