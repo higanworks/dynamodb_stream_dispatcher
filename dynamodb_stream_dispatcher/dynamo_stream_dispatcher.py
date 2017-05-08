@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from derecord import DeRecord
+from .derecord import DeRecord
 
 
 class DynamoStreamDispatcher:
