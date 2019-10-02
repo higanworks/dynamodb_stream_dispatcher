@@ -42,6 +42,12 @@ def yourfunc(rec):
    ## code to handle event
 ```
 
+## Test
+
+```
+$ pytest -p no:warnings -v dynamodb_stream_dispatcher
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/knife-zero/fork )
