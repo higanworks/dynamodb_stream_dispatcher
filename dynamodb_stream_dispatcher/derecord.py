@@ -20,5 +20,14 @@ class DeRecord:
         d = {}
         if image:
             for key in image:
-                d[key] = TypeDeserializer().deserialize(image[key])
+                try:
+                    d[key] = TypeDeserializer().deserialize(image[key])
+                except TypeError:
+                    if image[key].get('B'):
+                        d[key] = image[key]['B'].encode()
+                    elif image[key].get('BS'):
+                        d[key] = [x.encode() for x in image[key]['BS']]
+                    else:
+                        d[key] = image[key]
+                    continue
         return d
