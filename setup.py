@@ -5,9 +5,10 @@ from setuptools import setup, find_packages
 description = 'Dispatch dymamodb stream event to your functions.'
 requires = open('requirements.txt').read().splitlines()
 
+
 setup(
     name="dynamodb_stream_dispatcher",
-    version='0.4.0',
+    version='0.4.1',
     description=description,
     long_description=description,
     author="SAWANOBORI Yukihiko",
@@ -15,5 +16,6 @@ setup(
     url="https://github.com/higanworks/dynamodb_stream_dispatcher",
     license="MIT",
     packages=find_packages(),
-    install_requires=requires
+    # ignore boto3 from requires to avoid force install
+    install_requires=[]
 )
